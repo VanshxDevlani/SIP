@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .container{
+            display: grid;
+            gap: 70px;
+        }
+        .container:hover .item1{
+            transform:translate(1000px);
+            transition-duration: 2s;
+        }
+        .container:hover .item2{
+            transform:translate(1000px);
+            transition-duration: 3s;
+        }
+        .container:hover .item3{
+            transform:translate(1000px);
+            transition-duration: 4s;
+        }
+        .container:hover .item4{
+            transform:translate(1000px);
+            transition-duration: 5s;
+        }
+        .container:hover .item5{
+            transform:translate(1000px);
+            transition-duration: 1s;
+        }
+        
+        .item{
+            border: 2px solid ;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            border-radius: 10%;
+        }
+        .item1:hover{
+            transform: translate(1000px);
+            transition-duration: 4s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+        }
+        .item2:hover{
+            transform: translate(1000px);
+            transition-duration: 3s;
+            transition-timing-function:ease;
+
+        }
+        .item3:hover{
+         transform: translate(1000px);
+         transition-duration: 4s;
+          transition-timing-function: ease-out;
+
+        }
+        .item4:hover{
+          transform: translate(1000px);
+          transition-duration: 4s;
+          transition-timing-function: linear;
+        }
+        .item5:hover{
+          transform: translate(1000px);
+          transition-duration: 4s;
+          transition-timing-function: ease-in;
+
+        }
+
+    </style>
+</head>
+<body>
+    <audio src="Diljit CLASH (Official) Music Video  G.O.A.T..mp3" controls></audio>
+    <audio src="White Smoke.mp3"controls></audio>
+<br><br>
+   <div class="container">
+        <div class="item item1">CAR 1
+            <img src="car.jpg">
+        </div>
+        <div class="item item2">box2
+                        <img src="car.jpg">
+
+        </div>
+        <div class="item item3">box3
+                        <img src="car.jpg">
+
+        </div>
+        <div class="item item4">box4
+                        <img src="car.jpg">
+
+        </div>
+        <div class="item item5">Catch Me if you can!
+                        <img src="car.jpg">
+
+        </div>
+ 
+</body>
+</html>
