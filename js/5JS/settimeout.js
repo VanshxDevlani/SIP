@@ -14,15 +14,15 @@
 //     console.log("jaha aap bolo!")
 // }, 3000);
 
-//pyramid way 
+//2 ka table 
 setTimeout(() => {
-      console.log("kahi chale kya!")
+      console.log("2")
   setTimeout(()=>{
-        console.log("kaha  !")
+        console.log("4")
    setTimeout(()=>{
-        console.log("jaha aap bolo!")
+        console.log("6")
 setTimeout(()=>{
-    console.log("manali")
+    console.log("8")
 },1000)
    },1000)
   },1000)

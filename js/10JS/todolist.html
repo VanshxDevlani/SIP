@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       button{
+        color :aliceblue;
+        background-color: chartreuse;
+        border: 1px solid black;
+        padding: 15px;
+       } 
+       button:hover{
+        background-color: coral;
+       }
+       input{
+        background-color: aquamarine;
+        border: 1px solid white;
+        border-radius: 30px;
+        color: azure;
+        padding: 15px 80px;
+       }
+    </style>
+</head>
+
+<body>
+    <input class="inp" type="text">
+    <button class="btn">add</button>
+        <!-- <button class="btn">down</button>
+            <button class="btn">del</button> -->
+
+
+    <ul class="tasklist">
+
+    </ul>
+
+
+
+    <script>
+        const inp = document.querySelector('.inp');
+        const btn = document.querySelector('.btn');
+        const tasklist = document.querySelector('.tasklist');
+
+        btn.addEventListener('click', () => {
+            console.log(inp.value)
+            let task = inp.value;
+            let li = document.createElement('li');
+            li.classList.add('taskname');
+            li.innerHTML = `${task}
+            <span>
+                <button class = "up">up</button>
+                <button class = "down">down</button>
+                <button class = "del">del</button>
+            </span>`
+            tasklist.appendChild(li);
+             li.style.listStyle = "none";
+             
+             inp.value = "";
+
+        })
+        tasklist.addEventListener('click',(ev) =>{
+            let list = ev.target;
+            if(list.classList.contains('up')){
+                let parentElement = list.parentElement.parentElement;
+                console.log(parentElement)
+                let previousElement = parentElement.previousElementSibling;
+                console.log(previousElement)
+                tasklist.insertBefore(parentElement, previousElement);
+            }
+            else if(list.classList.contains('down')){
+                let parentElement = list.parentElement.parentElement;
+                console.log(parentElement);
+                let nextElement = parentElement.nextElement;
+                console.log(nextElement)
+                taskList.insertBefore(nextElement,parentElement);
+2
+            }else if (list.classList.contains('del')){
+                let parentElement = list.parentElement.parentElement;
+                console.log(parentElement);
+                parentElement.remove();
+            }
+        })
+
+    </script>
+</body>
+
+</html>

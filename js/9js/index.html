@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div class = conatiner>
+        <div class = data>
+            <p>hello ji !</p>
+            <h3> hi ji !</h3>
+        </div>
+    </div>
+
+    <ul>
+        <li>iteam 1</li>
+        <li>iteam 1</li>
+        <li>iteam 1</li>
+        <li>iteam 1</li>
+        <li>iteam 1</li>
+
+    </ul>
+
+    <script>
+
+    const uls = document.queryselectorAll('li');
+    uls.foreach(element => {
+        console.log(element)
+        element.style.color = 'red';
+        element.style.liststyle = 'none';
+         element.style.backgrounds = 'blue';
+
+    });
+
+    </script>
+
+    
+    
+</body>
+</html>

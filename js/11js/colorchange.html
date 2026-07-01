@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="btns">
+        <button class="red">red</button>
+        <button class="blue">blue</button>
+        <button class="pink">pink</button>
+    </div>
+
+    <script>
+
+        const red = document.querySelector('.red');
+        const blue = document.querySelector('.blue');
+        const pink = document.querySelector('.pink');
+        const btn = document.querySelector('.btns');
+
+        btn.addEventListener('click',(vans) =>{
+            let data = vans.target;
+            if(data.classList.contains('red')){
+                localStorage.setItem("savedcolor","red")
+                document.body.style.backgroundColor = 'red'
+            }
+            else if(data.classList.contains('blue')){
+                localStorage.setItem("savedcolor","blue")
+                document.body.style.backgroundColor = 'blue'
+            }else if (data.classList.contains('pink')){
+                localStorage.setItem("savedcolor","pink")
+                document.body.style.backgroundColor = 'pink'
+            }
+            let previousColor = localStorage.getItem("savedcolor");
+            if (previousColor){
+                document.body.style.backgroundColor = previousColor;
+            }
+
+
+        })
+        
+
+    </script>
+</body>
+
+</html>
